@@ -15,6 +15,10 @@
 		FC17B1112111C27800DDDDA7 /* iTune_VIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1102111C27800DDDDA7 /* iTune_VIPTests.swift */; };
 		FC17B11C2111C27800DDDDA7 /* iTune_VIPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B11B2111C27800DDDDA7 /* iTune_VIPUITests.swift */; };
 		FC17B12C2111C4BE00DDDDA7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B12B2111C4BE00DDDDA7 /* Track.swift */; };
+		FC17B1312111C71300DDDDA7 /* TrackListBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1302111C71300DDDDA7 /* TrackListBusinessLogic.swift */; };
+		FC17B1332111C73100DDDDA7 /* TrackListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1322111C73100DDDDA7 /* TrackListInteractor.swift */; };
+		FC17B1352111C74000DDDDA7 /* TrackListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1342111C74000DDDDA7 /* TrackListPresenter.swift */; };
+		FC17B1372111C7A300DDDDA7 /* TrackListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1362111C7A300DDDDA7 /* TrackListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		FC17B11B2111C27800DDDDA7 /* iTune_VIPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTune_VIPUITests.swift; sourceTree = "<group>"; };
 		FC17B11D2111C27800DDDDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC17B12B2111C4BE00DDDDA7 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		FC17B1302111C71300DDDDA7 /* TrackListBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListBusinessLogic.swift; sourceTree = "<group>"; };
+		FC17B1322111C73100DDDDA7 /* TrackListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListInteractor.swift; sourceTree = "<group>"; };
+		FC17B1342111C74000DDDDA7 /* TrackListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListPresenter.swift; sourceTree = "<group>"; };
+		FC17B1362111C7A300DDDDA7 /* TrackListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		FC17B0FA2111C26F00DDDDA7 /* iTune_VIP */ = {
 			isa = PBXGroup;
 			children = (
+				FC17B12E2111C5DF00DDDDA7 /* Scenes */,
 				FC17B1292111C48A00DDDDA7 /* Common */,
 				FC17B0FB2111C26F00DDDDA7 /* AppDelegate.swift */,
 				FC17B0FD2111C26F00DDDDA7 /* ViewController.swift */,
@@ -142,6 +151,25 @@
 				FC17B12B2111C4BE00DDDDA7 /* Track.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FC17B12D2111C57B00DDDDA7 /* TrackList */ = {
+			isa = PBXGroup;
+			children = (
+				FC17B1302111C71300DDDDA7 /* TrackListBusinessLogic.swift */,
+				FC17B1322111C73100DDDDA7 /* TrackListInteractor.swift */,
+				FC17B1342111C74000DDDDA7 /* TrackListPresenter.swift */,
+				FC17B1362111C7A300DDDDA7 /* TrackListTableViewController.swift */,
+			);
+			path = TrackList;
+			sourceTree = "<group>";
+		};
+		FC17B12E2111C5DF00DDDDA7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FC17B12D2111C57B00DDDDA7 /* TrackList */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC17B1352111C74000DDDDA7 /* TrackListPresenter.swift in Sources */,
+				FC17B1332111C73100DDDDA7 /* TrackListInteractor.swift in Sources */,
 				FC17B0FE2111C26F00DDDDA7 /* ViewController.swift in Sources */,
 				FC17B0FC2111C26F00DDDDA7 /* AppDelegate.swift in Sources */,
+				FC17B1312111C71300DDDDA7 /* TrackListBusinessLogic.swift in Sources */,
+				FC17B1372111C7A300DDDDA7 /* TrackListTableViewController.swift in Sources */,
 				FC17B12C2111C4BE00DDDDA7 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
