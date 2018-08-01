@@ -14,6 +14,7 @@
 		FC17B1062111C27800DDDDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC17B1042111C27800DDDDA7 /* LaunchScreen.storyboard */; };
 		FC17B1112111C27800DDDDA7 /* iTune_VIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1102111C27800DDDDA7 /* iTune_VIPTests.swift */; };
 		FC17B11C2111C27800DDDDA7 /* iTune_VIPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B11B2111C27800DDDDA7 /* iTune_VIPUITests.swift */; };
+		FC17B12C2111C4BE00DDDDA7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B12B2111C4BE00DDDDA7 /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FC17B1172111C27800DDDDA7 /* iTune_VIPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTune_VIPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC17B11B2111C27800DDDDA7 /* iTune_VIPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTune_VIPUITests.swift; sourceTree = "<group>"; };
 		FC17B11D2111C27800DDDDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC17B12B2111C4BE00DDDDA7 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		FC17B0FA2111C26F00DDDDA7 /* iTune_VIP */ = {
 			isa = PBXGroup;
 			children = (
+				FC17B1292111C48A00DDDDA7 /* Common */,
 				FC17B0FB2111C26F00DDDDA7 /* AppDelegate.swift */,
 				FC17B0FD2111C26F00DDDDA7 /* ViewController.swift */,
 				FC17B0FF2111C26F00DDDDA7 /* Main.storyboard */,
@@ -123,6 +126,22 @@
 				FC17B11D2111C27800DDDDA7 /* Info.plist */,
 			);
 			path = iTune_VIPUITests;
+			sourceTree = "<group>";
+		};
+		FC17B1292111C48A00DDDDA7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FC17B12A2111C49C00DDDDA7 /* Model */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FC17B12A2111C49C00DDDDA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC17B12B2111C4BE00DDDDA7 /* Track.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +277,7 @@
 			files = (
 				FC17B0FE2111C26F00DDDDA7 /* ViewController.swift in Sources */,
 				FC17B0FC2111C26F00DDDDA7 /* AppDelegate.swift in Sources */,
+				FC17B12C2111C4BE00DDDDA7 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
