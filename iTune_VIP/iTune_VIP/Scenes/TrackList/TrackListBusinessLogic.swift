@@ -20,9 +20,9 @@ protocol TrackListPresentationLogic {
     
 }
 
-protocol TrackListDisplayLogic {
+protocol TrackListDisplayLogic: class {
     
-    func didFinishFetchingTracks(tracks: [TrackList.FetchAll.ViewModel])
+    func didFinishFetching(tracks: [TrackList.FetchAll.ViewModel])
 }
 
 
@@ -36,12 +36,12 @@ enum TrackList {
         }
         
         struct Response {
-            
+            let tracks: [Track]
         }
         
         struct ViewModel {
-            
-            
+            let artistName: String
+            let trackName: String
         }
     }
 }
