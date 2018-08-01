@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Track {
+struct Track: Codable {
     
     let wrapperType: String
     let kind: String
@@ -18,4 +18,22 @@ struct Track {
     let trackName: String
     let trackViewUrl: String
     let previewUrl: String
+}
+
+struct TrackListResponse: Codable {
+    
+    let resultCount: Int
+    let results: [Track]
+}
+
+struct TrackListRequest: ResourceRequest {
+    
+    //https://itunes.apple.com/search?term=jack+johnson&limit=25
+    //https://itunes.apple.com/search?term=jack+johnson&entity=musicVideo
+    
+    var baseURL: String { return "https://itunes.apple.com/search" }
+    
+    var path: String { return "" }
+    
+    var paramter: Parameter? { return ["term" : "jack+johnson"] }
 }

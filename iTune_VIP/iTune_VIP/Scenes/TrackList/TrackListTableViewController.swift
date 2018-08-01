@@ -30,7 +30,9 @@ final class TrackListTableViewController: UITableViewController {
         let presenter = TrackListPresenter()
         presenter.view = self
         
-        interactor = TrackListInteractor(store: MemStore(), presenter: presenter)
+        //let memStore = MemStore()
+        let networkStore = TrackNetworkStore()
+        interactor = TrackListInteractor(store: networkStore, presenter: presenter)
     }
 
     private func fetchTracks() {

@@ -19,6 +19,13 @@
 		FC17B1332111C73100DDDDA7 /* TrackListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1322111C73100DDDDA7 /* TrackListInteractor.swift */; };
 		FC17B1352111C74000DDDDA7 /* TrackListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1342111C74000DDDDA7 /* TrackListPresenter.swift */; };
 		FC17B1372111C7A300DDDDA7 /* TrackListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1362111C7A300DDDDA7 /* TrackListTableViewController.swift */; };
+		FC17B13A2111F3FB00DDDDA7 /* ResourceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1392111F3FB00DDDDA7 /* ResourceRequest.swift */; };
+		FC17B13C2111F40F00DDDDA7 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B13B2111F40F00DDDDA7 /* ParameterEncoding.swift */; };
+		FC17B13E2111F41C00DDDDA7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B13D2111F41C00DDDDA7 /* NetworkError.swift */; };
+		FC17B1402111F42800DDDDA7 /* URLSessionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B13F2111F42800DDDDA7 /* URLSessionRouter.swift */; };
+		FC17B1472111F9B500DDDDA7 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1462111F9B500DDDDA7 /* WebServiceManager.swift */; };
+		FC17B1492111FE9A00DDDDA7 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1482111FE9A00DDDDA7 /* NetworkRouter.swift */; };
+		FC17B14B2111FF5000DDDDA7 /* TrackListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B14A2111FF5000DDDDA7 /* TrackListStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,13 @@
 		FC17B1322111C73100DDDDA7 /* TrackListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListInteractor.swift; sourceTree = "<group>"; };
 		FC17B1342111C74000DDDDA7 /* TrackListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListPresenter.swift; sourceTree = "<group>"; };
 		FC17B1362111C7A300DDDDA7 /* TrackListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTableViewController.swift; sourceTree = "<group>"; };
+		FC17B1392111F3FB00DDDDA7 /* ResourceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRequest.swift; sourceTree = "<group>"; };
+		FC17B13B2111F40F00DDDDA7 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		FC17B13D2111F41C00DDDDA7 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FC17B13F2111F42800DDDDA7 /* URLSessionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRouter.swift; sourceTree = "<group>"; };
+		FC17B1462111F9B500DDDDA7 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		FC17B1482111FE9A00DDDDA7 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		FC17B14A2111FF5000DDDDA7 /* TrackListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +123,7 @@
 			children = (
 				FC17B12E2111C5DF00DDDDA7 /* Scenes */,
 				FC17B1292111C48A00DDDDA7 /* Common */,
+				FC17B1382111F3D500DDDDA7 /* NetworkLayer */,
 				FC17B0FB2111C26F00DDDDA7 /* AppDelegate.swift */,
 				FC17B0FD2111C26F00DDDDA7 /* ViewController.swift */,
 				FC17B0FF2111C26F00DDDDA7 /* Main.storyboard */,
@@ -160,6 +175,7 @@
 				FC17B1322111C73100DDDDA7 /* TrackListInteractor.swift */,
 				FC17B1342111C74000DDDDA7 /* TrackListPresenter.swift */,
 				FC17B1362111C7A300DDDDA7 /* TrackListTableViewController.swift */,
+				FC17B14A2111FF5000DDDDA7 /* TrackListStore.swift */,
 			);
 			path = TrackList;
 			sourceTree = "<group>";
@@ -170,6 +186,27 @@
 				FC17B12D2111C57B00DDDDA7 /* TrackList */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FC17B1382111F3D500DDDDA7 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FC17B1452111F95800DDDDA7 /* Facade */,
+				FC17B1392111F3FB00DDDDA7 /* ResourceRequest.swift */,
+				FC17B13B2111F40F00DDDDA7 /* ParameterEncoding.swift */,
+				FC17B13D2111F41C00DDDDA7 /* NetworkError.swift */,
+				FC17B13F2111F42800DDDDA7 /* URLSessionRouter.swift */,
+				FC17B1482111FE9A00DDDDA7 /* NetworkRouter.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		FC17B1452111F95800DDDDA7 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				FC17B1462111F9B500DDDDA7 /* WebServiceManager.swift */,
+			);
+			path = Facade;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,13 +340,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC17B1402111F42800DDDDA7 /* URLSessionRouter.swift in Sources */,
+				FC17B14B2111FF5000DDDDA7 /* TrackListStore.swift in Sources */,
+				FC17B13C2111F40F00DDDDA7 /* ParameterEncoding.swift in Sources */,
 				FC17B1352111C74000DDDDA7 /* TrackListPresenter.swift in Sources */,
+				FC17B13A2111F3FB00DDDDA7 /* ResourceRequest.swift in Sources */,
 				FC17B1332111C73100DDDDA7 /* TrackListInteractor.swift in Sources */,
 				FC17B0FE2111C26F00DDDDA7 /* ViewController.swift in Sources */,
 				FC17B0FC2111C26F00DDDDA7 /* AppDelegate.swift in Sources */,
 				FC17B1312111C71300DDDDA7 /* TrackListBusinessLogic.swift in Sources */,
+				FC17B1492111FE9A00DDDDA7 /* NetworkRouter.swift in Sources */,
+				FC17B1472111F9B500DDDDA7 /* WebServiceManager.swift in Sources */,
 				FC17B1372111C7A300DDDDA7 /* TrackListTableViewController.swift in Sources */,
 				FC17B12C2111C4BE00DDDDA7 /* Track.swift in Sources */,
+				FC17B13E2111F41C00DDDDA7 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
