@@ -37,7 +37,7 @@ final class TrackListTableViewController: UIViewController, UITableViewDelegate,
         let presenter = TrackListPresenter()
         presenter.view = self
         
-        //let memStore = MemStore() //mock for testing
+        //let memStore = MemStore() //stub for testing
         let networkStore = TrackNetworkStore()
         interactor = TrackListInteractor(store: networkStore, presenter: presenter)
     }

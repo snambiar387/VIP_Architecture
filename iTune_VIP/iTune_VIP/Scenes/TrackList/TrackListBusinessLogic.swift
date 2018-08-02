@@ -13,7 +13,6 @@ protocol TrackListBusinessLogic {
     func fetchAllTracks(for request: TrackList.Fetch.Request)
 }
 
-
 protocol TrackListPresentationLogic {
     
     func presentFetchedTracks(response: TrackList.Fetch.Response)
@@ -28,7 +27,6 @@ protocol TrackListDisplayLogic: class {
     
     func displayError(_ error: Error)
 }
-
 
 /// enum Provides the namespace
 

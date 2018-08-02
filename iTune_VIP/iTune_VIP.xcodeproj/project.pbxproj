@@ -28,6 +28,7 @@
 		FC17B14B2111FF5000DDDDA7 /* TrackListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B14A2111FF5000DDDDA7 /* TrackListStore.swift */; };
 		FC51B1CE2112D4130034C01B /* ActivityIndicatorLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51B1CD2112D4120034C01B /* ActivityIndicatorLoadable.swift */; };
 		FC51B1D12112E4390034C01B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51B1D02112E4390034C01B /* Extensions.swift */; };
+		FC51B1D5211307A90034C01B /* TrackListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51B1D4211307A90034C01B /* TrackListTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		FC17B14A2111FF5000DDDDA7 /* TrackListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListStore.swift; sourceTree = "<group>"; };
 		FC51B1CD2112D4120034C01B /* ActivityIndicatorLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorLoadable.swift; sourceTree = "<group>"; };
 		FC51B1D02112E4390034C01B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FC51B1D4211307A90034C01B /* TrackListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		FC17B10F2111C27800DDDDA7 /* iTune_VIPTests */ = {
 			isa = PBXGroup;
 			children = (
+				FC51B1D2211307750034C01B /* Scenes */,
 				FC17B1102111C27800DDDDA7 /* iTune_VIPTests.swift */,
 				FC17B1122111C27800DDDDA7 /* Info.plist */,
 			);
@@ -229,6 +232,22 @@
 				FC51B1D02112E4390034C01B /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC51B1D2211307750034C01B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FC51B1D3211307830034C01B /* TrackList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FC51B1D3211307830034C01B /* TrackList */ = {
+			isa = PBXGroup;
+			children = (
+				FC51B1D4211307A90034C01B /* TrackListTests.swift */,
+			);
+			path = TrackList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC17B1112111C27800DDDDA7 /* iTune_VIPTests.swift in Sources */,
+				FC51B1D5211307A90034C01B /* TrackListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
