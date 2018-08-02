@@ -8,8 +8,9 @@
 
 import Foundation
 
-enum ParseError: Error {
+enum TrackListError: Error {
     case parse
+    
 }
 
 class TrackNetworkStore: TrackStore {
@@ -28,7 +29,7 @@ class TrackNetworkStore: TrackStore {
                     let response = try JSONDecoder().decode(TrackListResponse.self, from: value)
                     completion(.success(response.results))
                 } catch {
-                    completion(.error(ParseError.parse))
+                    completion(.error(TrackListError.parse))
                 }
             }
         }

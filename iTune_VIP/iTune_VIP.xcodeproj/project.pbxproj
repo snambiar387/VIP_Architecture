@@ -26,6 +26,7 @@
 		FC17B1472111F9B500DDDDA7 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1462111F9B500DDDDA7 /* WebServiceManager.swift */; };
 		FC17B1492111FE9A00DDDDA7 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1482111FE9A00DDDDA7 /* NetworkRouter.swift */; };
 		FC17B14B2111FF5000DDDDA7 /* TrackListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B14A2111FF5000DDDDA7 /* TrackListStore.swift */; };
+		FC51B1CE2112D4130034C01B /* ActivityIndicatorLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51B1CD2112D4120034C01B /* ActivityIndicatorLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		FC17B1462111F9B500DDDDA7 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 		FC17B1482111FE9A00DDDDA7 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		FC17B14A2111FF5000DDDDA7 /* TrackListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListStore.swift; sourceTree = "<group>"; };
+		FC51B1CD2112D4120034C01B /* ActivityIndicatorLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		FC17B1292111C48A00DDDDA7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FC51B1CC2112D3EC0034C01B /* Protocol */,
 				FC17B12A2111C49C00DDDDA7 /* Model */,
 			);
 			path = Common;
@@ -207,6 +210,14 @@
 				FC17B1462111F9B500DDDDA7 /* WebServiceManager.swift */,
 			);
 			path = Facade;
+			sourceTree = "<group>";
+		};
+		FC51B1CC2112D3EC0034C01B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FC51B1CD2112D4120034C01B /* ActivityIndicatorLoadable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 				FC17B1332111C73100DDDDA7 /* TrackListInteractor.swift in Sources */,
 				FC17B0FE2111C26F00DDDDA7 /* ViewController.swift in Sources */,
 				FC17B0FC2111C26F00DDDDA7 /* AppDelegate.swift in Sources */,
+				FC51B1CE2112D4130034C01B /* ActivityIndicatorLoadable.swift in Sources */,
 				FC17B1312111C71300DDDDA7 /* TrackListBusinessLogic.swift in Sources */,
 				FC17B1492111FE9A00DDDDA7 /* NetworkRouter.swift in Sources */,
 				FC17B1472111F9B500DDDDA7 /* WebServiceManager.swift in Sources */,

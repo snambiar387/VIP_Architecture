@@ -66,3 +66,7 @@ extension TrackListTableViewController: TrackListDisplayLogic {
         self.tracks = tracks
     }
 }
+
+extension TrackListTableViewController: ActivityIndicatorLoadable {
+    
+}
