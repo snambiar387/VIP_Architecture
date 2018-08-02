@@ -28,6 +28,7 @@ class TrackListTests: XCTestCase {
         super.tearDown()
     }
     
+    
     func testInteractorDelegatesLoadTrackToWorker() {
        
         //Given
@@ -39,6 +40,20 @@ class TrackListTests: XCTestCase {
         
         //then
         XCTAssert(dummyWorker.loadTrackIsCalled, "Should invoke method to load all tracks")
+        
+    }
+    
+    func testShouldNotLoadTrackIfArtistCharacterCountIsLessThan3() {
+        
+        //Given
+        let dummyWorker = DummyWorker()
+        sut.store = dummyWorker
+        
+        //when
+        sut.fetchAllTracks(for: TrackList.Fetch.Request(artistName: "Ako"))
+        
+        //then
+        XCTAssert(!dummyWorker.loadTrackIsCalled, "Should not invoke method to load all tracks")
         
     }
     
