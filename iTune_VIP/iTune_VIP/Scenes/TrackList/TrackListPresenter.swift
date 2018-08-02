@@ -20,6 +20,11 @@ class TrackListPresenter: TrackListPresentationLogic {
         
         view?.didFinishFetching(tracks: tracks)
     }
+    
+    func presentError(_ error: Error) {
+        
+        view?.displayError(error)
+    }
 }
 
 extension TrackListPresenter: ActivityIndicatorLoadable {

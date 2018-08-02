@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum TrackListError: Error {
-    case parse
+enum TrackListError: String, Error {
+    case parse = "Parsing error occured. Please try again later"
     
 }
 
@@ -55,7 +55,8 @@ class MemStore: TrackStore {
             let track4 = Track(wrapperType: wrapperType, kind: kind, artistName: "Akon", trackId: 4, collectionName: "", trackName: "Lonely", trackViewUrl: "", previewUrl: "")
             
             let tracks = [track1,track2,track3,track4]
-            completion(.success(tracks))
+            //completion(.success(tracks))
+            completion(.error(TrackListError.parse))
         }
     }
 }

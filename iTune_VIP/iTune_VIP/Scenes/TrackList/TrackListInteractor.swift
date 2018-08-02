@@ -46,7 +46,7 @@ class TrackListInteractor: TrackListBusinessLogic {
             
             switch result {
             case .error(let error):
-                break
+                strongSelf.presenter.presentError(error)
                 
             case .success(let tracks):
                 strongSelf.presenter.presentFetchedTracks(response: TrackList.FetchAll.Response(tracks: tracks))

@@ -18,11 +18,15 @@ protocol TrackListPresentationLogic {
     
     func presentFetchedTracks(response: TrackList.FetchAll.Response)
     
+    func presentError(_ error: Error)
+    
 }
 
 protocol TrackListDisplayLogic: class {
     
     func didFinishFetching(tracks: [TrackList.FetchAll.ViewModel])
+    
+    func displayError(_ error: Error)
 }
 
 

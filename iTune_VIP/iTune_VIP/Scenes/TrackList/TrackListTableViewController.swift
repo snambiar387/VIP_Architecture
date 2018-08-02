@@ -30,7 +30,7 @@ final class TrackListTableViewController: UITableViewController {
         let presenter = TrackListPresenter()
         presenter.view = self
         
-        //let memStore = MemStore()
+        //let memStore = MemStore() //mock for testing
         let networkStore = TrackNetworkStore()
         interactor = TrackListInteractor(store: networkStore, presenter: presenter)
     }
@@ -65,8 +65,27 @@ extension TrackListTableViewController: TrackListDisplayLogic {
     func didFinishFetching(tracks: [TrackList.FetchAll.ViewModel]) {
         self.tracks = tracks
     }
+    
+    func displayError(_ error: Error) {
+       
+        showSimpleAlertWith(title: "Error", message: error.localizedDescription)
+    }
 }
 
 extension TrackListTableViewController: ActivityIndicatorLoadable {
     
+}
+
+extension UIViewController {
+    
+    func showSimpleAlertWith(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+            
+        }
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
 }
