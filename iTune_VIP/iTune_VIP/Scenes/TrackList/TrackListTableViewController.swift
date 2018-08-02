@@ -8,7 +8,14 @@
 
 import UIKit
 
-final class TrackListTableViewController: UITableViewController {
+final class TrackListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var searchTextField: UISearchBar!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.tableFooterView = UIView()
+        }
+    }
     
     var tracks: [TrackList.FetchAll.ViewModel] = [] {
         didSet{
@@ -40,14 +47,12 @@ final class TrackListTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
  
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tracks.count
     }
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         let track = tracks[indexPath.row]
@@ -56,6 +61,10 @@ final class TrackListTableViewController: UITableViewController {
         cell.detailTextLabel?.text = track.artistName
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }
 
@@ -73,19 +82,4 @@ extension TrackListTableViewController: TrackListDisplayLogic {
 }
 
 extension TrackListTableViewController: ActivityIndicatorLoadable {
-    
-}
-
-extension UIViewController {
-    
-    func showSimpleAlertWith(title: String, message: String) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
-            
-        }
-        alert.addAction(ok)
-        present(alert, animated: true, completion: nil)
-    }
 }

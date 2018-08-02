@@ -25,8 +25,8 @@ class TrackListInteractor: TrackListBusinessLogic {
      Now we can have in-memory store(for testing purposes ), a network or core-data store so that interactor doesn't have to concentrate much on how to load data.
      In fact we can have worker for other complex/lengthy independent opearations so that the worker can be reused.
 */
-    let store: TrackStore
-    let presenter: Presenter
+    private let store: TrackStore
+    private let presenter: Presenter
     
     init(store: TrackStore, presenter: Presenter) {
         

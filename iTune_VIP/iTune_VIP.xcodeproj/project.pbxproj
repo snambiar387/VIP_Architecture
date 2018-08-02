@@ -27,6 +27,7 @@
 		FC17B1492111FE9A00DDDDA7 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B1482111FE9A00DDDDA7 /* NetworkRouter.swift */; };
 		FC17B14B2111FF5000DDDDA7 /* TrackListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17B14A2111FF5000DDDDA7 /* TrackListStore.swift */; };
 		FC51B1CE2112D4130034C01B /* ActivityIndicatorLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51B1CD2112D4120034C01B /* ActivityIndicatorLoadable.swift */; };
+		FC51B1D12112E4390034C01B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51B1D02112E4390034C01B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FC17B1482111FE9A00DDDDA7 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		FC17B14A2111FF5000DDDDA7 /* TrackListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListStore.swift; sourceTree = "<group>"; };
 		FC51B1CD2112D4120034C01B /* ActivityIndicatorLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorLoadable.swift; sourceTree = "<group>"; };
+		FC51B1D02112E4390034C01B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		FC17B1292111C48A00DDDDA7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FC51B1CF2112E3FC0034C01B /* Extensions */,
 				FC51B1CC2112D3EC0034C01B /* Protocol */,
 				FC17B12A2111C49C00DDDDA7 /* Model */,
 			);
@@ -218,6 +221,14 @@
 				FC51B1CD2112D4120034C01B /* ActivityIndicatorLoadable.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FC51B1CF2112E3FC0034C01B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC51B1D02112E4390034C01B /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 				FC51B1CE2112D4130034C01B /* ActivityIndicatorLoadable.swift in Sources */,
 				FC17B1312111C71300DDDDA7 /* TrackListBusinessLogic.swift in Sources */,
 				FC17B1492111FE9A00DDDDA7 /* NetworkRouter.swift in Sources */,
+				FC51B1D12112E4390034C01B /* Extensions.swift in Sources */,
 				FC17B1472111F9B500DDDDA7 /* WebServiceManager.swift in Sources */,
 				FC17B1372111C7A300DDDDA7 /* TrackListTableViewController.swift in Sources */,
 				FC17B12C2111C4BE00DDDDA7 /* Track.swift in Sources */,
