@@ -11,7 +11,7 @@ import Foundation
 
 protocol TrackStore {
     
-    func loadAllTracks(completion: @escaping (Result<[Track]>) -> Void)
+    func loadTracks(for request: TrackList.Fetch.Request, completion: @escaping (Result<[Track]>) -> Void)
 }
 
 
@@ -34,11 +34,18 @@ class TrackListInteractor: TrackListBusinessLogic {
         self.presenter = presenter
     }
     
-    func fetchAllTracks(for request: TrackList.FetchAll.Request) {
+    private func shouldRequest(_ request: TrackList.Fetch.Request)-> Bool {
+        
+        return request.artistName.count >= 4
+    }
+    
+    func fetchAllTracks(for request: TrackList.Fetch.Request) {
+        
+        guard shouldRequest(request) else { return }
         
         presenter.showActivityIndicator()
         
-        store.loadAllTracks {[weak self] (result) in
+        store.loadTracks(for: request) {[weak self] (result) in
             
             guard let strongSelf = self else { return }
             
@@ -49,7 +56,7 @@ class TrackListInteractor: TrackListBusinessLogic {
                 strongSelf.presenter.presentError(error)
                 
             case .success(let tracks):
-                strongSelf.presenter.presentFetchedTracks(response: TrackList.FetchAll.Response(tracks: tracks))
+                strongSelf.presenter.presentFetchedTracks(response: TrackList.Fetch.Response(tracks: tracks))
             }
         }
     }

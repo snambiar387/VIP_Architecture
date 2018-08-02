@@ -14,9 +14,9 @@ class TrackListPresenter: TrackListPresentationLogic {
     
     weak var view: TrackListView?
     
-    func presentFetchedTracks(response: TrackList.FetchAll.Response) {
+    func presentFetchedTracks(response: TrackList.Fetch.Response) {
         
-        let tracks = response.tracks.map { TrackList.FetchAll.ViewModel(artistName: $0.artistName, trackName: $0.trackName) }
+        let tracks = response.tracks.map { TrackList.Fetch.ViewModel(artistName: $0.artistName, trackName: $0.trackName) }
         
         view?.didFinishFetching(tracks: tracks)
     }

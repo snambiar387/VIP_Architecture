@@ -10,13 +10,13 @@ import Foundation
 
 protocol TrackListBusinessLogic {
     
-    func fetchAllTracks(for request: TrackList.FetchAll.Request)
+    func fetchAllTracks(for request: TrackList.Fetch.Request)
 }
 
 
 protocol TrackListPresentationLogic {
     
-    func presentFetchedTracks(response: TrackList.FetchAll.Response)
+    func presentFetchedTracks(response: TrackList.Fetch.Response)
     
     func presentError(_ error: Error)
     
@@ -24,7 +24,7 @@ protocol TrackListPresentationLogic {
 
 protocol TrackListDisplayLogic: class {
     
-    func didFinishFetching(tracks: [TrackList.FetchAll.ViewModel])
+    func didFinishFetching(tracks: [TrackList.Fetch.ViewModel])
     
     func displayError(_ error: Error)
 }
@@ -33,10 +33,10 @@ protocol TrackListDisplayLogic: class {
 /// enum Provides the namespace
 
 enum TrackList {
-    enum FetchAll {
+    enum Fetch {
        
         struct Request {
-            
+            let artistName: String
         }
         
         struct Response {

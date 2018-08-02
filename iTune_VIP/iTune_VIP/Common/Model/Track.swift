@@ -10,14 +10,15 @@ import Foundation
 
 struct Track: Codable {
     
-    let wrapperType: String
-    let kind: String
     let artistName: String
-    let trackId: Int
-    let collectionName: String
     let trackName: String
-    let trackViewUrl: String
-    let previewUrl: String
+    
+    //let wrapperType: String
+    //let kind: String
+    //let trackId: Int
+    //let collectionName: String
+    //let trackViewUrl: String
+    //let previewUrl: String
 }
 
 struct TrackListResponse: Codable {
@@ -28,6 +29,7 @@ struct TrackListResponse: Codable {
 
 struct TrackListRequest: ResourceRequest {
     
+    let artistName: String
     //https://itunes.apple.com/search?term=jack+johnson&limit=25
     //https://itunes.apple.com/search?term=jack+johnson&entity=musicVideo
     
@@ -35,5 +37,5 @@ struct TrackListRequest: ResourceRequest {
     
     var path: String { return "" }
     
-    var paramter: Parameter? { return ["term" : "jack+johnson"] }
+    var paramter: Parameter? { return ["term" : artistName] }
 }

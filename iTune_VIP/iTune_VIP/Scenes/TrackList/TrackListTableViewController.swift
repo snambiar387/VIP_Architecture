@@ -17,7 +17,7 @@ final class TrackListTableViewController: UIViewController, UITableViewDelegate,
         }
     }
     
-    var tracks: [TrackList.FetchAll.ViewModel] = [] {
+    var tracks: [TrackList.Fetch.ViewModel] = [] {
         didSet{
             tableView.reloadData()
         }
@@ -29,7 +29,7 @@ final class TrackListTableViewController: UIViewController, UITableViewDelegate,
         super.viewDidLoad()
 
         setUp()
-        fetchTracks()
+        fetchTracksOf("Akon")
     }
     
     private func setUp() {
@@ -42,8 +42,8 @@ final class TrackListTableViewController: UIViewController, UITableViewDelegate,
         interactor = TrackListInteractor(store: networkStore, presenter: presenter)
     }
 
-    private func fetchTracks() {
-        interactor.fetchAllTracks(for: TrackList.FetchAll.Request())
+    private func fetchTracksOf(_ artistName: String) {
+        interactor.fetchAllTracks(for: TrackList.Fetch.Request(artistName: artistName))
     }
 
     // MARK: - Table view data source
@@ -69,9 +69,21 @@ final class TrackListTableViewController: UIViewController, UITableViewDelegate,
 }
 
 
+extension TrackListTableViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        print("ended")
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //print(searchText)
+        fetchTracksOf(searchText)
+    }
+}
+
 extension TrackListTableViewController: TrackListDisplayLogic {
     
-    func didFinishFetching(tracks: [TrackList.FetchAll.ViewModel]) {
+    func didFinishFetching(tracks: [TrackList.Fetch.ViewModel]) {
         self.tracks = tracks
     }
     
